@@ -1,5 +1,4 @@
 import { App, Button } from "antd";
-import yayJpg from "../assets/yay.jpg";
 
 export default function HomePage() {
   const { modal } = App.useApp();
