@@ -1,7 +1,9 @@
 /**
- * @param a {number} A
- **/
+ * 
+ * @param a 
+ * @param b 
+ * @returns 
+ */
 export const add = (a: number, b: number) => {
-  console.log("Amber");
   return a + b;
 };
