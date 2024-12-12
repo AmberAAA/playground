@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "✨ playground",
+			"path": "."
+		},
+		{
+			"name": "📦 umi-ts-antd-react",
+			"path": "packages/umi-ts-antd-react"
+		}
+	],
+	"settings": {}
+}
