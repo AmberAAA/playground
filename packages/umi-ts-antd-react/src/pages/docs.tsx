@@ -1,12 +1,11 @@
 import { useCounter } from "ahooks";
 
 const DocsPage = () => {
-
-  const [count, {inc, reset}] =  useCounter(0)
+  const [count, { inc }] = useCounter(0);
 
   const onClick = () => {
-    inc()
-  }
+    inc();
+  };
 
   return (
     <div>
