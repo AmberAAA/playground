@@ -6,12 +6,15 @@
     "dev": "umi dev",
     "postinstall": "umi setup",
     "setup": "umi setup",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@umijs/plugins": "^4.3.36",
     "ahooks": "^3.8.4",
     "antd": "^5.22.3",
+    "ts-node": "^10.9.2",
     "umi": "^4.3.36"
   },
   "devDependencies": {
@@ -29,4 +32,3 @@
     "typescript": "^5.0.3"
   }
 }
-
