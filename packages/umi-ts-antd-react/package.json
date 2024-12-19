@@ -11,6 +11,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.5.2",
     "@umijs/plugins": "^4.3.36",
     "ahooks": "^3.8.4",
     "antd": "^5.22.3",
