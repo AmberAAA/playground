@@ -5,8 +5,8 @@
 			"path": "."
 		},
 		{
-			"name": "📦 next-playground",
-			"path": "packages/next-jest"
+			"name": "📦 nest-server",
+			"path": "packages/nest-server"
 		},
 		{
 			"name": "📦 umi-ts-antd-react",
