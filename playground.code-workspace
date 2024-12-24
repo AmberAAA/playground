@@ -5,6 +5,10 @@
 			"path": "."
 		},
 		{
+			"name": "📦 next-playground",
+			"path": "packages/next-jest"
+		},
+		{
 			"name": "📦 umi-ts-antd-react",
 			"path": "packages/umi-ts-antd-react"
 		}
