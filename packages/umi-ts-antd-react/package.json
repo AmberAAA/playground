@@ -12,9 +12,14 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
+    "@tanstack/react-query": "4",
+    "@trpc/client": "^10.45.2",
+    "@trpc/react-query": "^10.45.2",
+    "@trpc/server": "^10.45.2",
     "@umijs/plugins": "^4.3.36",
     "ahooks": "^3.8.4",
     "antd": "^5.22.3",
+    "express-server": "../express-server",
     "ts-node": "^10.9.2",
     "umi": "^4.3.36"
   },

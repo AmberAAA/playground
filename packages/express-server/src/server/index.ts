@@ -1,33 +1,25 @@
 import { initTRPC } from "@trpc/server";
 import { z } from "zod";
-import { drizzle } from "drizzle-orm/libsql";
-import { createClient } from "@libsql/client";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import { usersTable } from "../db/schema";
 import { eq } from "drizzle-orm";
+import { db } from "db";
+import { createInsertSchema } from "drizzle-zod";
 
+export const t = initTRPC.create();
 
-const client = createClient({ url: process.env.DB_FILE_NAME! });
-const db = drizzle({ client });
-
-// created for each request
-export const createContext = ({
-  req,
-  res,
-}: trpcExpress.CreateExpressContextOptions) => ({ db }); 
-
-type Context = Awaited<ReturnType<typeof createContext>>;
-
-export const t = initTRPC.context<Context>().create();
+const userInsertSchema = createInsertSchema(usersTable);
 
 export const appRouter = t.router({
-  getUser: t.procedure.input(z.string()).query( async (opts) => {
-    const email = opts.input
-    const user = await opts.ctx.db.select().from(usersTable).where(eq(usersTable.email, email)).get();
-    return user
+  getUser: t.procedure.query(async (opts) => {
+    const users = await db.select().from(usersTable).all();
+    return users;
   }),
-  a: t.procedure.query(() => 1)
+  addUser: t.procedure.input(userInsertSchema).mutation(async ({input: user}) => {
+    const u = await db.insert(usersTable).values(user).returning().get();
+    return u;
+  })
 });
 
-
+// export type definition of API
 export type AppRouter = typeof appRouter;
