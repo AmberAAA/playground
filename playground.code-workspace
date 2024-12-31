@@ -5,8 +5,8 @@
 			"path": "."
 		},
 		{
-			"name": "📦 nest-server",
-			"path": "packages/nest-server"
+			"name": "📦 express-server",
+			"path": "packages/express-server"
 		},
 		{
 			"name": "📦 umi-ts-antd-react",
